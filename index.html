@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>PCL2官网 - Plain Craft Launcher 2 PCL2下载 | 我的世界启动器 by 龙腾猫跃</title>
+    <title>PCL2官网 - Plain Craft Launcher 2 PCL2下载 | by 张泽凯</title>
     <meta name="description"
         content="PCL2（Plain Craft Launcher 2）是由龙腾猫跃开发的免费开源 Minecraft 启动器。支持 Forge、Fabric、模组管理、自动下载、自定义主题等功能。立即下载体验最好用的我的世界启动器！" />
     <meta name="keywords"
@@ -381,100 +381,6 @@
             color: #818cf8;
         }
 
-        /* ===== 截图轮播 ===== */
-        .screenshot-wrapper {
-            position: relative;
-        }
-
-        .screenshot-slide {
-            display: none;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            position: relative;
-        }
-
-        .screenshot-slide.active {
-            display: block;
-        }
-
-        .screenshot-slide img {
-            width: 100%;
-            aspect-ratio: 16/9;
-            object-fit: cover;
-        }
-
-        .screenshot-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 24px;
-            background: linear-gradient(to top, var(--bg-section), transparent);
-            text-align: left;
-        }
-
-        .screenshot-caption h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .screenshot-caption p {
-            color: var(--text-soft);
-        }
-
-        .slider-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: rgba(30, 41, 59, 0.9);
-            border: none;
-            color: #fff;
-            font-size: 1.2rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.2s;
-        }
-
-        .slider-btn:hover {
-            background: rgba(51, 65, 85, 0.9);
-        }
-
-        .prev-btn {
-            left: 16px;
-        }
-
-        .next-btn {
-            right: 16px;
-        }
-
-        .slider-dots {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 24px;
-        }
-
-        .slider-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--border);
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .slider-dot.active {
-            background: var(--primary);
-        }
-
         /* ===== 特性卡片 ===== */
         .card-grid {
             display: grid;
@@ -657,20 +563,6 @@
             text-decoration: underline;
         }
 
-        /* ===== 友情链接 ===== */
-        .friendly-links a {
-            display: inline-block;
-            padding: 3px 8px;
-            border-radius: var(--radius-full);
-            font-size: 0.75rem;
-            color: var(--text-soft);
-            transition: color 0.2s;
-        }
-
-        .friendly-links a:hover {
-            color: #c7d2fe;
-        }
-
         /* ===== 页脚 ===== */
         .footer {
             background: var(--bg-section);
@@ -678,18 +570,8 @@
             padding: 48px 0;
         }
 
-        .footer-links-header {
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-        }
-
         .footer-bottom {
             border-top: 1px solid var(--border);
-            margin-top: 32px;
             padding-top: 32px;
             text-align: center;
             font-size: 0.85rem;
@@ -795,6 +677,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -805,6 +688,7 @@
             0% {
                 transform: translate(0, 0);
             }
+
             100% {
                 transform: translate(50px, 50px);
             }
@@ -821,6 +705,7 @@
             .card-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
             .section-title {
                 font-size: 3rem;
             }
@@ -830,21 +715,27 @@
             .nav-links {
                 display: flex;
             }
+
             .hamburger {
                 display: none;
             }
+
             .mobile-menu {
                 display: none !important;
             }
+
             .download-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
+
             .doc-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
+
             .about-grid {
                 grid-template-columns: 1fr 1fr;
             }
+
             .stat-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -854,6 +745,7 @@
             .card-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
+
             .section-title {
                 font-size: 3.5rem;
             }
@@ -1001,6 +893,7 @@
                 <i class="fas fa-cube"></i> PCL2
             </a>
             <ul class="nav-links">
+                <li><a href="https://zzk227227.github.io">网站主页</a></li>
                 <li><a href="#home">首页</a></li>
                 <li><a href="#features">特性</a></li>
                 <li><a href="#download">下载</a></li>
@@ -1046,64 +939,8 @@
             </div>
 
             <p class="author">
-                作者：<a href="https://afdian.com/a/LTCat" target="_blank" rel="noopener noreferrer">龙腾猫跃</a>
+                原作者：<a href="https://afdian.com/a/LTCat" target="_blank" rel="noopener noreferrer">龙腾猫跃</a>
             </p>
-        </div>
-    </section>
-
-    <!-- 截图展示 -->
-    <section class="section bg-section-alt">
-        <div class="container">
-            <h2 class="section-title">界面预览</h2>
-            <div class="screenshot-wrapper" id="screenshot-slider">
-                <div class="screenshot-slide active">
-                    <img src="images/screenshot-1.jpg" alt="PCL2 主界面" loading="lazy" />
-                    <div class="screenshot-caption">
-                        <h3>精美主界面</h3>
-                        <p>现代化设计，简洁直观的操作界面</p>
-                    </div>
-                </div>
-                <div class="screenshot-slide">
-                    <img src="images/screenshot-2.jpg" alt="PCL2 版本管理" loading="lazy" />
-                    <div class="screenshot-caption">
-                        <h3>版本管理</h3>
-                        <p>支持所有 Minecraft 版本，轻松切换 Forge/Fabric</p>
-                    </div>
-                </div>
-                <div class="screenshot-slide">
-                    <img src="images/screenshot-3.jpg" alt="PCL2 模组管理" loading="lazy" />
-                    <div class="screenshot-caption">
-                        <h3>模组管理</h3>
-                        <p>一键安装、启用或禁用模组，简单高效</p>
-                    </div>
-                </div>
-                <div class="screenshot-slide">
-                    <img src="images/screenshot-4.jpg" alt="PCL2 下载中心" loading="lazy" />
-                    <div class="screenshot-caption">
-                        <h3>下载中心</h3>
-                        <p>自动下载游戏、模组和资源包，省时省力</p>
-                    </div>
-                </div>
-                <div class="screenshot-slide">
-                    <img src="images/screenshot-5.jpg" alt="PCL2 自定义主题" loading="lazy" />
-                    <div class="screenshot-caption">
-                        <h3>自定义主题</h3>
-                        <p>丰富的主题选项，打造个性化启动器</p>
-                    </div>
-                </div>
-                <div class="screenshot-slide">
-                    <img src="images/screenshot-6.jpg" alt="PCL2 版本设置" loading="lazy" />
-                    <div class="screenshot-caption">
-                        <h3>版本设置</h3>
-                        <p>详细的游戏配置，满足高级玩家需求</p>
-                    </div>
-                </div>
-                <button class="slider-btn prev-btn" onclick="changeSlide(-1)"><i
-                        class="fas fa-chevron-left"></i></button>
-                <button class="slider-btn next-btn" onclick="changeSlide(1)"><i
-                        class="fas fa-chevron-right"></i></button>
-            </div>
-            <div class="slider-dots" id="slider-dots"></div>
         </div>
     </section>
 
@@ -1342,12 +1179,6 @@
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
-            <div style="padding:32px 0">
-                <h4 class="footer-links-header">友情链接</h4>
-                <div id="friendly-links-list" class="friendly-links" style="display:flex;flex-wrap:wrap;gap:4px 8px">
-                    <span style="font-size:0.75rem;color:var(--text-muted)">友链加载中...</span>
-                </div>
-            </div>
             <div class="footer-bottom">
                 <p style="margin-bottom:8px">&copy; 2025 PCL2官网. Made with <span class="heart">❤</span> by 龙腾猫跃</p>
                 <p>Minecraft 是 Mojang AB 的商标。本项目与 Mojang AB 无关。</p>
@@ -1356,64 +1187,7 @@
     </footer>
 
     <script>
-        // 截图轮播
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.screenshot-slide');
-        const totalSlides = slides.length;
-
-        function initDots() {
-            const dotsContainer = document.getElementById('slider-dots');
-            for (let i = 0; i < totalSlides; i++) {
-                const dot = document.createElement('button');
-                dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
-                dot.onclick = () => goToSlide(i);
-                dotsContainer.appendChild(dot);
-            }
-        }
-
-        function goToSlide(index) {
-            slides[currentSlide].classList.remove('active');
-            document.querySelectorAll('.slider-dot')[currentSlide].classList.remove('active');
-            currentSlide = ((index % totalSlides) + totalSlides) % totalSlides;
-            slides[currentSlide].classList.add('active');
-            document.querySelectorAll('.slider-dot')[currentSlide].classList.add('active');
-        }
-
-        function changeSlide(direction) {
-            goToSlide(currentSlide + direction);
-        }
-
-        initDots();
-
-        // 自动轮播
-        setInterval(() => changeSlide(1), 5000);
-
-        // 友情链接
-        async function renderFriendlyLinks() {
-            const container = document.getElementById('friendly-links-list');
-            if (!container) return;
-            try {
-                const resp = await fetch('https://api.aoe.top/api/friendly/links');
-                if (!resp.ok) throw new Error('Failed');
-                const links = await resp.json();
-                container.innerHTML = '';
-                (Array.isArray(links) ? links : []).forEach(link => {
-                    const a = document.createElement('a');
-                    a.href = link.url;
-                    a.target = '_blank';
-                    a.rel = 'noopener noreferrer';
-                    a.textContent = link.name;
-                    container.appendChild(a);
-                });
-            } catch (e) {
-                container.innerHTML =
-                    '<span style="font-size:0.75rem;color:#fca5a5">友链加载失败，请稍后重试。</span>';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', renderFriendlyLinks);
-
-        // 导航链接点击后关闭移动菜单
+        // 移动菜单关闭监听（保留基础交互）
         document.querySelectorAll('.mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 link.closest('.mobile-menu').classList.remove('open');
