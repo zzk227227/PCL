@@ -498,101 +498,19 @@
             margin-bottom: 24px;
         }
 
-        /* ===== FAQ ===== */
-        .faq-list {
+        /* 下载区域布局优化：两个卡片居中显示 */
+        .download-grid {
             display: flex;
-            flex-direction: column;
-            gap: 16px;
-            max-width: 768px;
-            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 48px;
         }
 
-        .faq-item {
-            background: var(--bg-card);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            overflow: hidden;
-        }
-
-        .faq-question {
+        .download-grid .download-card {
             width: 100%;
-            padding: 20px 24px;
-            text-align: left;
-            font-weight: 700;
-            font-size: 1.05rem;
-            background: none;
-            border: none;
-            color: var(--text);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.2s;
-        }
-
-        .faq-question:hover {
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        .faq-question i {
-            transition: transform 0.3s ease;
-            color: var(--text-soft);
-        }
-
-        .faq-item.open .faq-question i {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            display: none;
-            padding: 0 24px 20px;
-            border-top: 1px solid var(--border);
-            color: var(--text-soft);
-            line-height: 1.8;
-        }
-
-        .faq-item.open .faq-answer {
-            display: block;
-        }
-
-        .faq-answer a {
-            color: var(--primary);
-        }
-
-        .faq-answer a:hover {
-            text-decoration: underline;
-        }
-
-        /* ===== 页脚 ===== */
-        .footer {
-            background: var(--bg-section);
-            border-top: 1px solid var(--border);
-            padding: 48px 0;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid var(--border);
-            padding-top: 32px;
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .footer-bottom .heart {
-            color: #ef4444;
-        }
-
-        /* ===== 提示条 ===== */
-        .info-bar {
-            text-align: center;
-            padding: 20px;
-            background: rgba(99, 102, 241, 0.08);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: var(--radius-sm);
-        }
-
-        .info-bar i {
-            color: var(--primary);
+            max-width: 360px;
+            flex: 0 0 auto;
         }
 
         /* ===== 文档卡片 ===== */
@@ -660,15 +578,36 @@
             color: var(--text-soft);
         }
 
-        /* ===== 加载动画 ===== */
-        .spinner {
-            display: inline-block;
-            width: 32px;
-            height: 32px;
-            border: 3px solid var(--border);
-            border-top-color: var(--primary);
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
+        /* ===== 提示条 ===== */
+        .info-bar {
+            text-align: center;
+            padding: 20px;
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: var(--radius-sm);
+        }
+
+        .info-bar i {
+            color: var(--primary);
+        }
+
+        /* ===== 页脚 ===== */
+        .footer {
+            background: var(--bg-section);
+            border-top: 1px solid var(--border);
+            padding: 48px 0;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 32px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer-bottom .heart {
+            color: #ef4444;
         }
 
         /* ===== 动画 ===== */
@@ -691,12 +630,6 @@
 
             100% {
                 transform: translate(50px, 50px);
-            }
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
             }
         }
 
@@ -724,10 +657,6 @@
                 display: none !important;
             }
 
-            .download-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
             .doc-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
@@ -751,19 +680,7 @@
             }
         }
 
-        .download-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 24px;
-            margin-bottom: 48px;
-        }
-
-        @media (min-width: 768px) {
-            .download-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
+        /* 文档和关于区域布局 */
         .doc-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -801,12 +718,6 @@
             }
         }
 
-        .btn-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
         .btn-group-inline {
             display: flex;
             flex-wrap: wrap;
@@ -821,36 +732,8 @@
             text-align: center;
         }
 
-        .mb-2 {
-            margin-bottom: 8px;
-        }
-
-        .mb-3 {
-            margin-bottom: 12px;
-        }
-
         .mb-4 {
             margin-bottom: 16px;
-        }
-
-        .mb-6 {
-            margin-bottom: 24px;
-        }
-
-        .mb-8 {
-            margin-bottom: 32px;
-        }
-
-        .mt-8 {
-            margin-top: 32px;
-        }
-
-        .leading-relaxed {
-            line-height: 1.8;
-        }
-
-        .font-semibold {
-            font-weight: 600;
         }
     </style>
 
@@ -1012,9 +895,6 @@
         </div>
     </section>
 
-    <!-- 更新日志 -->
-
-
     <!-- 文档区域 -->
     <section id="docs" class="section bg-section-alt">
         <div class="container">
@@ -1059,7 +939,6 @@
                     <h3 style="font-size:1.75rem;font-weight:700;margin-bottom:12px">开源协议</h3>
                     <p style="color:var(--text-soft);margin-bottom:32px">本项目采用 LGPL-3.0 协议开源</p>
                     <div class="btn-group-inline">
-                       
                         <a href="https://afdian.com/a/LTCat" target="_blank" class="btn btn-dark">
                             <i class="fas fa-coffee"></i> 赞助作者
                         </a>
@@ -1086,7 +965,6 @@
         </div>
     </section>
 
-
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
@@ -1098,7 +976,7 @@
     </footer>
 
     <script>
-        // 移动菜单关闭监听（保留基础交互）
+        // 移动菜单关闭监听
         document.querySelectorAll('.mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 link.closest('.mobile-menu').classList.remove('open');
